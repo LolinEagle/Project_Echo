@@ -1,0 +1,42 @@
+{
+  "spriteId": {
+    "name": "sButton0",
+    "path": "sprites/sButton0/sButton0.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "pTitle",
+    "path": "objects/pTitle/pTitle.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"titleWord","path":"objects/pTitle/pTitle.yy",},"objectId":{"name":"pTitle","path":"objects/pTitle/pTitle.yy",},"value":"Quit","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"titleTextbox","path":"objects/pTitle/pTitle.yy",},"objectId":{"name":"pTitle","path":"objects/pTitle/pTitle.yy",},"value":"Game End","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Title",
+    "path": "folders/Objects/GameLogic/Title.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "oTitle1",
+  "tags": [],
+  "resourceType": "GMObject",
+}

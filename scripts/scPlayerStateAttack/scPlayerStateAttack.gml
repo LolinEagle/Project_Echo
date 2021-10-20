@@ -1,0 +1,1 @@
+function scPlayerStateAttack(){script_execute(stateAttack);}
