@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Entity",
-    "path": "folders/Scripts/Entity.yy",
+  "$GMScript":"v1",
+  "%Name":"scEntityDropList",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scEntityDropList",
+  "parent":{
+    "name":"Entity",
+    "path":"folders/Scripts/Entity.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scEntityDropList",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

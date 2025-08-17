@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "_Main",
-    "path": "folders/Scripts/_Main.yy",
+  "$GMScript":"v1",
+  "%Name":"ENUM",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ENUM",
+  "parent":{
+    "name":"_Main",
+    "path":"folders/Scripts/_Main.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ENUM",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

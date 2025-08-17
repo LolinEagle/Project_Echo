@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "_Main",
-    "path": "folders/Scripts/_Main.yy",
+  "$GMScript":"v1",
+  "%Name":"MACROS",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"MACROS",
+  "parent":{
+    "name":"_Main",
+    "path":"folders/Scripts/_Main.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "MACROS",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

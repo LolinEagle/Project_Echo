@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "GameLogic",
-    "path": "folders/Scripts/GameLogic.yy",
+  "$GMScript":"v1",
+  "%Name":"scSaveGame",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scSaveGame",
+  "parent":{
+    "name":"GameLogic",
+    "path":"folders/Scripts/GameLogic.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scSaveGame",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

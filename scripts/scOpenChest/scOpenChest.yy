@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Entity",
-    "path": "folders/Scripts/Entity.yy",
+  "$GMScript":"v1",
+  "%Name":"scOpenChest",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scOpenChest",
+  "parent":{
+    "name":"Entity",
+    "path":"folders/Scripts/Entity.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scOpenChest",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

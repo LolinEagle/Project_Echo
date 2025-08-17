@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Skill",
-    "path": "folders/Scripts/Player/Skill.yy",
+  "$GMScript":"v1",
+  "%Name":"PlayerIzanagiItem",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerIzanagiItem",
+  "parent":{
+    "name":"Skill",
+    "path":"folders/Scripts/Player/Skill.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "PlayerIzanagiItem",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

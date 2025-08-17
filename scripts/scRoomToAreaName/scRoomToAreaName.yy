@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "GameLogic",
-    "path": "folders/Scripts/GameLogic.yy",
+  "$GMScript":"v1",
+  "%Name":"scRoomToAreaName",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scRoomToAreaName",
+  "parent":{
+    "name":"GameLogic",
+    "path":"folders/Scripts/GameLogic.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scRoomToAreaName",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
