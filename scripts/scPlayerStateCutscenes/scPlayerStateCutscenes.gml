@@ -1,6 +1,6 @@
 function scPlayerStateCutscenes(){
 	var _oldSprite = sprite_index;
-	
+
 	//Sprite & Horizontal Speed
 	if(x < 448){
 		hSpeed = 0.5;

@@ -146,7 +146,7 @@ function scNineSliceBoxStretched(_a0, _a1, _a2, _a3, _a4, _a5){
 	///@arg sprite
 	///@arg x1 left
 	///@arg y1 top
-	///@arg x2 rigt
+	///@arg x2 right
 	///@arg y2 bottom
 	///@arg index image_index
 	var _s = sprite_get_width(_a0) / 3;

@@ -14,14 +14,18 @@ if(!keyPressed){
 if(keyboard_check_pressed(global.gameUp)){
 	if(--slotsSelected < 0){slotsSelected = 3;}
 }
-
-if(keyboard_check_pressed(global.gameDown)){
+else if(keyboard_check_pressed(global.gameDown)){
 	if(++slotsSelected > 3){slotsSelected = 0;}
+}
+for(var _slot = 0; _slot <= 3; _slot++){
+	if(mouse_x > RES_W_HALF && mouse_y > 50 + _slot * 110 && mouse_y < 50 + (_slot + 1) * 110){
+		slotsSelected = _slot;
+	}
 }
 
 //Start Game
 if(
-	keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)
+	(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || mouse_check_button_pressed(mb_left))
 	&& keyPressed
 	&& !loadingStarted
 ){
@@ -33,4 +37,4 @@ if(
 }
 
 //Check keyPressed
-if(keyboard_check_pressed(vk_anykey)){keyPressed = true;}
+if(keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_left)){keyPressed = true;}

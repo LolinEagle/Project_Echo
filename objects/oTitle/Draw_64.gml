@@ -18,16 +18,14 @@ if(slotsVisible > 0){
 			_img = 1;
 			draw_sprite(sPause, 0, _x - 32, _y + 55);
 		}
-		scNineSliceBoxStretched(sMenuBoxBg, _x, _y, RES_W, _y + 110, _img);
+		scNineSliceBoxStretched(sMenuBoxBg, _x, _y, RES_W + 16, _y + 110, _img);
 		
 		//Draw the save data
 		scDrawSet(fRoboto18, fa_top, fa_left);
 		if(SLOT == -1){
-			draw_text(_x + 16, _y + 16, "Start New Game...");
+			draw_text(_x + 16, _y + 16, "Start New Game");
 		}else{
-			draw_text(
-				_x + 16, _y + 16, scRoomToAreaName(SLOT[? "room"])
-			);
+			draw_text(_x + 16, _y + 16, scRoomToAreaName(SLOT[? "room"]));
 			
 			//Draw health
 			var _playerHealth = SLOT[? "playerHealth"];

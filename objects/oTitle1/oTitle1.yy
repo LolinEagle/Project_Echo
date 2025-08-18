@@ -8,7 +8,7 @@
   "name":"oTitle1",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pTitle","path":"objects/pTitle/pTitle.yy",},"propertyId":{"name":"titleWord","path":"objects/pTitle/pTitle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Quit",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pTitle","path":"objects/pTitle/pTitle.yy",},"propertyId":{"name":"titleTextbox","path":"objects/pTitle/pTitle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Game End",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pTitle","path":"objects/pTitle/pTitle.yy",},"propertyId":{"name":"titleTextbox","path":"objects/pTitle/pTitle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Quit game",},
   ],
   "parent":{
     "name":"Title",
