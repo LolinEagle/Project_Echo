@@ -23,9 +23,9 @@ if(
 			var _yy = RES_H / 6;
 			instance_create_depth(144, _yy * 1, depth - 1, oMenuEquipment);
 			instance_create_depth(144, _yy * 2, depth - 1, oMenuSkillTree);
-			//instance_create_depth(144, _yy * 2, depth - 1, oMenuStatistical);
-			//instance_create_depth(144, _yy * 2, depth - 1, oMenuNotebook);
-			instance_create_depth(144, _yy * 5, depth - 1, oMenuOption);
+			instance_create_depth(144, _yy * 3, depth - 1, oMenuOption);
+			instance_create_depth(144, _yy * 4, depth - 1, oMenuMenu);
+			instance_create_depth(144, _yy * 5, depth - 1, oMenuQuit);
 		}
 	}else{
 		//Unpause

@@ -9,8 +9,8 @@ if(titleVisible > 0){
 }
 
 if(slotsVisible > 0){
-	draw_set_alpha(slotsVisible);
 	for(var _slot = 0; _slot <= 3; _slot++){
+		draw_set_alpha(slotsVisible);
 		var _y = 50 + _slot * 110;
 		var _x = RES_W_HALF;
 		var _img = 0;

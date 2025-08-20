@@ -1,17 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayerCar",
+  "%Name":"oMenuMenu",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oPlayerCar",
-  "overriddenProperties":[],
+  "name":"oMenuMenu",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"pMenu","path":"objects/pMenu/pMenu.yy",},"propertyId":{"name":"menuTitle","path":"objects/pMenu/pMenu.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Menu",},
+  ],
   "parent":{
-    "name":"Other",
-    "path":"folders/Objects/Entity/Other.yy",
+    "name":"_Menu",
+    "path":"folders/Objects/GameLogic/Menu/_Menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"pMenu",
+    "path":"objects/pMenu/pMenu.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayerCar",
-    "path":"sprites/sPlayerCar/sPlayerCar.yy",
+    "name":"sButton0",
+    "path":"sprites/sButton0/sButton0.yy",
   },
   "spriteMaskId":null,
   "visible":true,

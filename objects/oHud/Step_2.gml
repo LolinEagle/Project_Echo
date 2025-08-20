@@ -25,22 +25,21 @@ if(global.gamePaused && !instance_exists(oOption)){
 					speed = gamePausedSpeed;
 				}
 			break;
-			
-			//Back to Menu
+
+			//Option
 			case 1:
+				scCameraGetView();
+				pauseOptionSelected = 0;
+				instance_create_depth(RES_W_HALF + cx, 128 + cy, depth - 2, oOption);
+			break;
+
+			//Back to Menu
+			case 2:
 				with(oGame){instance_destroy();}
 				scSaveGame();
 				game_restart();
 			break;
-	
-			//Option
-			case 2:
-				scCameraGetView();
-				instance_create_depth(
-					RES_W_HALF + cx, 128 + cy, depth - 2, oOption
-				);
-			break;
-			
+
 			//Save & Quit
 			case 3:
 				scSaveGame();

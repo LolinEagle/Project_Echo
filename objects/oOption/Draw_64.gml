@@ -11,6 +11,7 @@ draw_set_colour(c_white);
 draw_text(RES_W_HALF, RES_H * 0.8, "Pressed Enter to Exit");
 
 //Volume
+return;
 draw_text(xstart - cx, y - cy - 32, "Music");
 draw_rectangle_colour(
 	xstart - cx - 320, y - cy - 8, xstart - cx + 320, y - cy + 8,

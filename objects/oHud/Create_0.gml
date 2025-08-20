@@ -1,3 +1,3 @@
 ///@desc Pause Var
-pauseOption = ["Return", "Back to Menu", "Option", "Save & Quit"];
+pauseOption = ["Return", "Option", "Menu", "Quit"];
 pauseOptionSelected = 0;

@@ -328,8 +328,8 @@
   ],
   "name":"rVillage2",
   "parent":{
-    "name":"Game",
-    "path":"folders/Rooms/Game.yy",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":{
     "name":"rParent",

@@ -19,8 +19,8 @@
   ],
   "name":"rParent",
   "parent":{
-    "name":"_Main",
-    "path":"folders/Rooms/_Main.yy",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
