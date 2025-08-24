@@ -4,7 +4,8 @@
 if(!global.gamePaused){
 	var _string;
 	var _stringBis;
-	
+
+	//Top left
 	#region Draw Health
 	scDrawSet(fRoboto24, fa_left, fa_top);
 	var _playeerHealth = global.playerHealth;
@@ -20,13 +21,42 @@ if(!global.gamePaused){
 		}
 		draw_sprite(sHudHealth, _imageIndex, 8 + ((i - 1) * 30), 8);
 	}#endregion
-
+	#region Draw Mana
+	if(instance_exists(oPlayer)){
+		scDrawSetDefault();
+		var _amount = (global.playerMana / global.playerManaMax) * 100;
+		draw_healthbar(
+			8, 38, global.playerManaMax + 8, 64,
+			_amount, c_black, c_blue, c_blue, 0, true, false
+		);
+	}#endregion
+	#region Draw Item
+	_xx = 8;
+	_yy = 68;
+	draw_sprite(sHudItemBox, 0, _xx, _yy);
+	draw_sprite(sHudItem, global.playerItem, _xx, _yy);
+	if(global.playerItemsAmmo[global.playerItem] != -1){
+		draw_set_font(fRoboto18);
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_bottom);
+		draw_set_color(c_black);
+		_xx = _xx + (sprite_get_width(sHudItemBox) / 2);
+		_yy = _yy + sprite_get_height(sHudItemBox) + 12;
+		_str = string(global.playerItemsAmmo[global.playerItem]);
+		draw_text(_xx + 2, _yy, _str);
+		draw_text(_xx - 2, _yy, _str);
+		draw_text(_xx, _yy + 2, _str);
+		draw_text(_xx, _yy - 2, _str);
+		draw_set_color(c_white);
+		draw_text(_xx, _yy, _str);
+	}#endregion
 	#region Draw Money
 	var _xx = 80;
 	var _yy = 90;
 	draw_sprite(sCoin, 0, _xx, _yy);
 
 	//Draw Coin Text
+	scDrawSet(fRoboto18, fa_left, fa_top);
 	draw_set_color(c_black);
 	_xx += sprite_get_width(sCoin);
 	_yy = 68;
@@ -38,44 +68,12 @@ if(!global.gamePaused){
 	draw_set_color(c_white);
 	draw_text(_xx, _yy, _str);#endregion
 
-	#region Draw Item
-	if(global.playerHasItems){
-		_xx = 8;
-		_yy = 68;
-		draw_sprite(sHudItemBox, 0, _xx, _yy);
-		draw_sprite(sHudItem, global.playerItem, _xx, _yy);
-		if(global.playerItemsAmmo[global.playerItem] != -1){
-			draw_set_font(fRoboto18);
-			draw_set_halign(fa_center);
-			draw_set_valign(fa_bottom);
-			draw_set_color(c_black);
-			_xx = _xx + (sprite_get_width(sHudItemBox) / 2);
-			_yy = _yy + sprite_get_height(sHudItemBox) + 16;
-			_str = string(global.playerItemsAmmo[global.playerItem]);
-			draw_text(_xx + 2, _yy, _str);
-			draw_text(_xx - 2, _yy, _str);
-			draw_text(_xx, _yy + 2, _str);
-			draw_text(_xx, _yy - 2, _str);
-			draw_set_color(c_white);
-			draw_text(_xx, _yy, _str);	
-		}
-	}#endregion
-
-	#region Draw Mana
-	if(instance_exists(oPlayer)){
-		scDrawSetDefault();
-		var _amount = (global.playerMana / global.playerManaMax) * 100;
-		draw_healthbar(
-			8, 38, global.playerManaMax + 8, 64,
-			_amount, c_black, c_blue, c_blue, 0, true, false
-		);
-	}#endregion
-
+	//Top right
 	#region Draw Experience
 	if(--drawExperience > 0){
 		scDrawSet(fRoboto24, fa_right, fa_top);
-		var _xx = RES_W - 8;
-		var _yy = 8;
+		_xx = RES_W - 8;
+		_yy = 8;
 		draw_set_color(c_black);
 		draw_text(_xx + 1, _yy + 1, "Level : " + string(global.playerLevel));
 		draw_text(_xx + 1, _yy - 1, "Level : " + string(global.playerLevel));
@@ -95,37 +93,66 @@ if(!global.gamePaused){
 		draw_set_color(c_white);
 		draw_text(_xx, _yy + 32, _string);
 	}#endregion
-
-	#region Draw Weapon
-	if(global.playerHasWeapon){
-		scDrawSet(fRoboto18, fa_left, fa_bottom);
-		draw_sprite(sHudWeaponBox, 0, RES_W - 8, RES_H - 8);
-		draw_sprite(
-			sHudSelect, global.playerWeaponEquipt, RES_W - 6, RES_H - 6
-		);
-		_xx = RES_W - 164;
 	
-		//Primary 1
-		draw_sprite(
-			sHudWeapon, global.playerWeaponEquiptArray[0],
-			RES_W - 8, RES_H - 110
-		);
-		if(global.playerAmmoLoad[global.playerWeaponEquiptArray[0]] = -1){
-			if(global.playerAmmo[global.playerWeaponEquiptArray[0]] != -1){
-				draw_set_color(c_black);
-				_string = global.playerAmmo[global.playerWeaponEquiptArray[0]];
-				draw_text(_xx + 1, RES_H - 110 + 1, _string);
-				draw_text(_xx - 1, RES_H - 110 + 1, _string);
-				draw_text(_xx + 1, RES_H - 110 - 1, _string);
-				draw_text(_xx - 1, RES_H - 110 - 1, _string);
-				draw_set_color(c_white);
-				draw_text(_xx, RES_H - 110, _string);
-			}
+	//Bottom left
+	#region Key
+	_xx = 24;
+	_yy = RES_H - 8;
+	var _strs = ["Pause", "Use", "Reload"];
+	var _keys = ["Esc", "E", "R"];
+	var _nbr = 68;
+	var _localX = 0;
+	var _localY = 0;
+
+	//Draw Text
+	for(var _iKey = 0; _iKey < 3; _iKey++){
+		//Background
+		draw_sprite(sKey, 0, _xx + (_iKey * _nbr), _yy - sprite_get_height(sKey));
+		
+		//Key
+		if(_iKey > 0){
+			scDrawSet(fRoboto18, fa_left, fa_bottom);
+			draw_text(_xx + 8 + (_iKey * _nbr), _yy - 2, _keys[_iKey]);
 		}else{
+			//Esc
+			scDrawSet(fRoboto12, fa_left, fa_bottom);
+			draw_text(_xx + 3 + (_iKey * _nbr), _yy - 6, _keys[_iKey]);
+		}
+
+		//String
+		scDrawSet(fRoboto18, fa_center, fa_bottom);
+		draw_set_color(c_black);
+		_localX = _xx + 14 + (string_length( _strs[_iKey]) / 2) + (_iKey * _nbr);
+		_localY = _yy - sprite_get_height(sKey)
+		draw_text(_localX + 1, _localY + 1, _strs[_iKey]);
+		draw_text(_localX - 1, _localY + 1, _strs[_iKey]);
+		draw_text(_localX + 1, _localY - 1, _strs[_iKey]);
+		draw_text(_localX - 1, _localY - 1, _strs[_iKey]);
+		draw_set_color(c_white);
+		draw_text(_localX, _localY, _strs[_iKey]);
+	}#endregion
+
+	//Bottom right
+	#region Draw Weapon
+	scDrawSet(fRoboto18, fa_left, fa_bottom);
+	draw_sprite(sHudWeaponBox, 0, RES_W - 8, RES_H - 8);
+	draw_sprite(sHudSelect, global.playerWeaponEquipt, RES_W - 6, RES_H - 6);
+	_xx = RES_W - 164;
+	
+	//Primary 1
+	draw_sprite(
+		sHudWeapon, global.playerWeaponEquiptArray[0],
+		RES_W - 8, RES_H - 110
+	);
+	
+	//Key
+	draw_sprite(sKey, 0, _xx - 44, RES_H - 110 - sprite_get_height(sKey));
+	draw_text(_xx - 34, RES_H - 112, "1");
+	
+	if(global.playerAmmoLoad[global.playerWeaponEquiptArray[0]] = -1){
+		if(global.playerAmmo[global.playerWeaponEquiptArray[0]] != -1){
 			draw_set_color(c_black);
-			_string = global.playerAmmoLoad[global.playerWeaponEquiptArray[0]];
-			_stringBis = global.playerAmmo[global.playerWeaponEquiptArray[0]];
-			_string = string(_string) + "/" + string(_stringBis);
+			_string = global.playerAmmo[global.playerWeaponEquiptArray[0]];
 			draw_text(_xx + 1, RES_H - 110 + 1, _string);
 			draw_text(_xx - 1, RES_H - 110 + 1, _string);
 			draw_text(_xx + 1, RES_H - 110 - 1, _string);
@@ -133,66 +160,91 @@ if(!global.gamePaused){
 			draw_set_color(c_white);
 			draw_text(_xx, RES_H - 110, _string);
 		}
+	}
+	else{
+		draw_set_color(c_black);
+		_string = global.playerAmmoLoad[global.playerWeaponEquiptArray[0]];
+		_stringBis = global.playerAmmo[global.playerWeaponEquiptArray[0]];
+		_string = string(_string) + "/" + string(_stringBis);
+		draw_text(_xx + 1, RES_H - 110 + 1, _string);
+		draw_text(_xx - 1, RES_H - 110 + 1, _string);
+		draw_text(_xx + 1, RES_H - 110 - 1, _string);
+		draw_text(_xx - 1, RES_H - 110 - 1, _string);
+		draw_set_color(c_white);
+		draw_text(_xx, RES_H - 110, _string);
+	}
 	
-		//Primary 2
-		draw_sprite(
-			sHudWeapon, global.playerWeaponEquiptArray[1],
-			RES_W - 8, RES_H - 046
-		);
-		if(global.playerAmmoLoad[global.playerWeaponEquiptArray[1]] = -1){
-			if(global.playerAmmo[global.playerWeaponEquiptArray[1]] != -1){
-				draw_set_color(c_black);
-				_string = global.playerAmmo[global.playerWeaponEquiptArray[1]];
-				draw_text(_xx + 1, RES_H - 46 + 1, _string);
-				draw_text(_xx - 1, RES_H - 46 + 1, _string);
-				draw_text(_xx + 1, RES_H - 46 - 1, _string);
-				draw_text(_xx - 1, RES_H - 46 - 1, _string);
-				draw_set_color(c_white);
-				draw_text(_xx, RES_H - 046, _string);
-			}
-		}else{
+	//Primary 2
+	draw_sprite(
+		sHudWeapon, global.playerWeaponEquiptArray[1],
+		RES_W - 8, RES_H - 046
+	);
+	
+	//Key
+	draw_sprite(sKey, 0, _xx - 44, RES_H - 46 - sprite_get_height(sKey));
+	draw_text(_xx - 34, RES_H - 48, "2");
+	
+	if(global.playerAmmoLoad[global.playerWeaponEquiptArray[1]] = -1){
+		if(global.playerAmmo[global.playerWeaponEquiptArray[1]] != -1){
 			draw_set_color(c_black);
-			_string = global.playerAmmoLoad[global.playerWeaponEquiptArray[1]];
-			_stringBis = global.playerAmmo[global.playerWeaponEquiptArray[1]];
-			_string = string(_string) + "/" + string(_stringBis);
+			_string = global.playerAmmo[global.playerWeaponEquiptArray[1]];
 			draw_text(_xx + 1, RES_H - 46 + 1, _string);
 			draw_text(_xx - 1, RES_H - 46 + 1, _string);
 			draw_text(_xx + 1, RES_H - 46 - 1, _string);
 			draw_text(_xx - 1, RES_H - 46 - 1, _string);
 			draw_set_color(c_white);
-			draw_text(_xx, RES_H - 046, _string);
+			draw_text(_xx, RES_H - 46, _string);
 		}
+	}
+	else{
+		draw_set_color(c_black);
+		_string = global.playerAmmoLoad[global.playerWeaponEquiptArray[1]];
+		_stringBis = global.playerAmmo[global.playerWeaponEquiptArray[1]];
+		_string = string(_string) + "/" + string(_stringBis);
+		draw_text(_xx + 1, RES_H - 46 + 1, _string);
+		draw_text(_xx - 1, RES_H - 46 + 1, _string);
+		draw_text(_xx + 1, RES_H - 46 - 1, _string);
+		draw_text(_xx - 1, RES_H - 46 - 1, _string);
+		draw_set_color(c_white);
+		draw_text(_xx, RES_H - 046, _string);
+	}
 	
-		//Secondary
-		draw_sprite(
-			sHudWeapon, global.playerWeaponEquiptArray[2],
-			RES_W - 8, RES_H - 008
-		);
-		if(global.playerAmmoLoad[global.playerWeaponEquiptArray[2]] = -1){
-			if(global.playerAmmo[global.playerWeaponEquiptArray[2]] != -1){
-				draw_set_color(c_black);
-				_string = global.playerAmmo[global.playerWeaponEquiptArray[2]];
-				draw_text(_xx + 1, RES_H - 8 + 1, _string);
-				draw_text(_xx - 1, RES_H - 8 + 1, _string);
-				draw_text(_xx + 1, RES_H - 8 - 1, _string);
-				draw_text(_xx - 1, RES_H - 8 - 1, _string);
-				draw_set_color(c_white);
-				draw_text(_xx, RES_H - 008, _string);
-			}
-		}else{
+	//Secondary
+	draw_sprite(
+		sHudWeapon, global.playerWeaponEquiptArray[2],
+		RES_W - 8, RES_H - 008
+	);
+	
+	//Key
+	draw_sprite(sKey, 0, _xx - 44, RES_H - 8 - sprite_get_height(sKey));
+	draw_text(_xx - 34, RES_H - 10, "3");
+	
+	if(global.playerAmmoLoad[global.playerWeaponEquiptArray[2]] = -1){
+		if(global.playerAmmo[global.playerWeaponEquiptArray[2]] != -1){
 			draw_set_color(c_black);
-			_string = global.playerAmmoLoad[global.playerWeaponEquiptArray[2]];
-			_stringBis = global.playerAmmo[global.playerWeaponEquiptArray[2]];
-			_string = string(_string) + "/" + string(_stringBis);
+			_string = global.playerAmmo[global.playerWeaponEquiptArray[2]];
 			draw_text(_xx + 1, RES_H - 8 + 1, _string);
 			draw_text(_xx - 1, RES_H - 8 + 1, _string);
 			draw_text(_xx + 1, RES_H - 8 - 1, _string);
 			draw_text(_xx - 1, RES_H - 8 - 1, _string);
 			draw_set_color(c_white);
-			draw_text(_xx, RES_H - 008, _string);
+			draw_text(_xx, RES_H - 8, _string);
 		}
+	}
+	else{
+		draw_set_color(c_black);
+		_string = global.playerAmmoLoad[global.playerWeaponEquiptArray[2]];
+		_stringBis = global.playerAmmo[global.playerWeaponEquiptArray[2]];
+		_string = string(_string) + "/" + string(_stringBis);
+		draw_text(_xx + 1, RES_H - 8 + 1, _string);
+		draw_text(_xx - 1, RES_H - 8 + 1, _string);
+		draw_text(_xx + 1, RES_H - 8 - 1, _string);
+		draw_text(_xx - 1, RES_H - 8 - 1, _string);
+		draw_set_color(c_white);
+		draw_text(_xx, RES_H - 008, _string);
 	}#endregion
-}else{
+}
+else{
 	//Draw Pause Screen
 	
 	//Background

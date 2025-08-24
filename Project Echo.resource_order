@@ -175,6 +175,7 @@
     {"name":"sHudWeaponBox","order":4,"path":"sprites/sHudWeaponBox/sHudWeaponBox.yy",},
     {"name":"sIncendiary","order":21,"path":"sprites/sIncendiary/sIncendiary.yy",},
     {"name":"sIncendiaryDrop","order":6,"path":"sprites/sIncendiaryDrop/sIncendiaryDrop.yy",},
+    {"name":"sKey","order":23,"path":"sprites/sKey/sKey.yy",},
     {"name":"sLightning","order":28,"path":"sprites/sLightning/sLightning.yy",},
     {"name":"sManaDrop","order":5,"path":"sprites/sManaDrop/sManaDrop.yy",},
     {"name":"sMenuBoxBg","order":21,"path":"sprites/sMenuBoxBg/sMenuBoxBg.yy",},

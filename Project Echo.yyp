@@ -263,6 +263,7 @@
     {"id":{"name":"sHudWeaponBox","path":"sprites/sHudWeaponBox/sHudWeaponBox.yy",},},
     {"id":{"name":"sIncendiary","path":"sprites/sIncendiary/sIncendiary.yy",},},
     {"id":{"name":"sIncendiaryDrop","path":"sprites/sIncendiaryDrop/sIncendiaryDrop.yy",},},
+    {"id":{"name":"sKey","path":"sprites/sKey/sKey.yy",},},
     {"id":{"name":"sLightning","path":"sprites/sLightning/sLightning.yy",},},
     {"id":{"name":"sManaDrop","path":"sprites/sManaDrop/sManaDrop.yy",},},
     {"id":{"name":"sMenuBoxBg","path":"sprites/sMenuBoxBg/sMenuBoxBg.yy",},},

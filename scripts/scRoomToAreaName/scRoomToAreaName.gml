@@ -4,6 +4,7 @@ function scRoomToAreaName(_room){
 		case rVillage2: return "Around Village"; break;
 		case rCave: return "Cave"; break;
 		case rShop: return "Shop"; break;
-		default: return "Unknoown Area"; break;
+		case rIntro: return "The Meeting"; break;
+		default: return "Unknown Area"; break;
 	}
 }
