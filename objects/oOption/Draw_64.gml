@@ -3,7 +3,7 @@ scDrawSet(fRoboto24, fa_center, fa_middle);
 
 //Background
 draw_set_colour(c_black);
-var _back = 40;
+var _back = 0;
 draw_rectangle(_back, _back, RES_W - _back, RES_H - _back, false);
 
 //Text

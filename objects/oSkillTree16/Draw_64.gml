@@ -1,6 +1,6 @@
 ///@desc Draw the button and textbox
 var _colour = c_gray;
-if(global.playerWeaponUnlocked[previousWeaponUnlocked]){_colour = c_white;}
+if(global.playerItemUnlocked[ITEM.BOMB] || global.playerItemUnlocked[ITEM.MEDISHOT] || global.playerItemUnlocked[ITEM.INCENDIARY]){_colour = c_white;}
 draw_sprite_ext(sprite_index, image_index, x - cx, y - cy, 1, 1, 0, _colour, 1);
 
 //Title word

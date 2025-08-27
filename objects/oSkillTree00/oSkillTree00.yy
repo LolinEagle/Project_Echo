@@ -33,6 +33,7 @@
     {"$GMObjectProperty":"v1","%Name":"titleWord","filters":[],"listItems":[],"multiselect":false,"name":"titleWord","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Bayonet","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"titleTextbox","filters":[],"listItems":[],"multiselect":false,"name":"titleTextbox","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Bayonet","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"font","filters":[],"listItems":[],"multiselect":false,"name":"font","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"fRoboto24","varType":4,},
+    {"$GMObjectProperty":"v1","%Name":"previousWeaponUnlocked","filters":[],"listItems":[],"multiselect":false,"name":"previousWeaponUnlocked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"WEAPON.NONE","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

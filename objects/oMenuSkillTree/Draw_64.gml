@@ -34,4 +34,15 @@ if(selected){
 		"Skill Point: " + string(global.playerSkillPoint)
 	);
 	draw_text(784 + _xy, RES_H - 32, "Pressed Enter to Exit");
+}else{
+	if(global.playerSkillPoint > 0){
+		scDrawSet(fRoboto24, fa_left, fa_middle);
+		draw_set_color(c_black);
+		draw_text(oMenuSkillTree.x + 1 + 160, oMenuSkillTree.y + 1, "Skill Point: " + string(global.playerSkillPoint));
+		draw_text(oMenuSkillTree.x - 1 + 160, oMenuSkillTree.y + 1, "Skill Point: " + string(global.playerSkillPoint));
+		draw_text(oMenuSkillTree.x + 1 + 160, oMenuSkillTree.y - 1, "Skill Point: " + string(global.playerSkillPoint));
+		draw_text(oMenuSkillTree.x - 1 + 160, oMenuSkillTree.y - 1, "Skill Point: " + string(global.playerSkillPoint));
+		draw_set_color(c_red);
+		draw_text(oMenuSkillTree.x + 160, oMenuSkillTree.y, "Skill Point: " + string(global.playerSkillPoint));
+	}
 }

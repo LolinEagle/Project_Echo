@@ -3,6 +3,7 @@ if(
 	keyboard_check_pressed(vk_escape)
 	&& !instance_exists(oTransition)
 	&& oHud.visible
+	&& !global.gameSelected
 ){
 	//Menu
 	global.gameSelected = false;

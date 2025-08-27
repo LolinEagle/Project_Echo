@@ -48,7 +48,7 @@ function scGameItemWeapon(){
 	//Ammo
 	global.playerAmmo = array_create(WEAPON.TYPE_COUNT, -1);
 	global.playerAmmo[WEAPON.BOW] = 0;
-	global.playerAmmo[WEAPON.GUN] = 0;
+	global.playerAmmo[WEAPON.GUN] = 20;
 	global.playerAmmo[WEAPON.ASSAULT_RIFLE] = 0;
 	
 	//Ammo Load
@@ -65,9 +65,8 @@ function scGameItemWeapon(){
 		"Sword",
 		"Assault Rifle",
 		"Scepter",
-		"Long Sword",
-		"Bow",
-		"-"
+		"",
+		"Bow"
 	];
 	global.weaponCollect = [
 		oCoin,

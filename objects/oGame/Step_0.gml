@@ -51,7 +51,9 @@ for(var _i = 2; _i <= 99; _i++){
 //Debug
 if(global.gameDebug){
 	if(keyboard_check_pressed(vk_numpad0)){game_restart();}
-	if(keyboard_check_pressed(vk_numpad1)){
+	else if(keyboard_check_pressed(vk_numpad1)){global.playerSkillPoint += 10;}
+	else if(keyboard_check_pressed(vk_numpad2)){global.playerSkillPoint -= 10;}
+	else if(keyboard_check_pressed(vk_numpad9)){
 		file_delete("save0.sav");
 		file_delete("save1.sav");
 		file_delete("save2.sav");

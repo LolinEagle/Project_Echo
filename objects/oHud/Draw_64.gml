@@ -35,6 +35,9 @@ if(!global.gamePaused){
 	_yy = 68;
 	draw_sprite(sHudItemBox, 0, _xx, _yy);
 	draw_sprite(sHudItem, global.playerItem, _xx, _yy);
+	scDrawSet(fRoboto18, fa_left, fa_top);
+	draw_sprite(sKey, 0, _xx + 10, _yy + 64);
+	draw_text(_xx + 18, _yy + 66, "F");
 	if(global.playerItemsAmmo[global.playerItem] != -1){
 		draw_set_font(fRoboto18);
 		draw_set_halign(fa_center);
@@ -98,16 +101,16 @@ if(!global.gamePaused){
 	#region Key
 	_xx = 24;
 	_yy = RES_H - 8;
-	var _strs = ["Pause", "Use", "Reload"];
-	var _keys = ["Esc", "E", "R"];
+	var _strs = ["Pause", "Use", "Reload", "Item"];
+	var _keys = ["Esc", "E", "R", "A"];
 	var _nbr = 68;
 	var _localX = 0;
 	var _localY = 0;
 
 	//Draw Text
-	for(var _iKey = 0; _iKey < 3; _iKey++){
+	for(var _iKey = 0; _iKey < 4; _iKey++){
 		//Background
-		draw_sprite(sKey, 0, _xx + (_iKey * _nbr), _yy - sprite_get_height(sKey));
+		draw_sprite(sKey, (global.playerSkillPoint > 0 && _iKey == 0), _xx + (_iKey * _nbr), _yy - sprite_get_height(sKey));
 		
 		//Key
 		if(_iKey > 0){
@@ -128,6 +131,14 @@ if(!global.gamePaused){
 		draw_text(_localX - 1, _localY + 1, _strs[_iKey]);
 		draw_text(_localX + 1, _localY - 1, _strs[_iKey]);
 		draw_text(_localX - 1, _localY - 1, _strs[_iKey]);
+		if(global.playerSkillPoint > 0 && _iKey == 0){
+			draw_text(_localX + 1, _localY + 1 - 24, global.playerSkillPoint);
+			draw_text(_localX - 1, _localY + 1 - 24, global.playerSkillPoint);
+			draw_text(_localX + 1, _localY - 1 - 24, global.playerSkillPoint);
+			draw_text(_localX - 1, _localY - 1 - 24, global.playerSkillPoint);
+			draw_set_color(c_red);
+			draw_text(_localX, _localY - 24, global.playerSkillPoint);
+		}
 		draw_set_color(c_white);
 		draw_text(_localX, _localY, _strs[_iKey]);
 	}#endregion
@@ -255,6 +266,8 @@ else{
 	if(!global.gamePausedBattle){
 		draw_set_color(c_black);
 		draw_rectangle(0, 0, RES_W * 0.3, RES_H, false);
+		scDrawSet(fRoboto18, fa_right, fa_bottom);
+		draw_text(RES_W - 32, RES_H - 32, "Pressed Escape to Exit");
 	}else{
 		draw_text(RES_W_HALF, RES_H_HALF - 32, "- Pause -");
 		for(var i = 0; i < array_length(pauseOption); i++){

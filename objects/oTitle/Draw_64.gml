@@ -1,6 +1,6 @@
 if(titleVisible > 0){
 	scDrawSet(fRoboto12, fa_middle, fa_center);
-	draw_sprite(sTitle, 0, 0, -RES_H + titleVisible * RES_H);
+	draw_sprite(sTitle, 0, RES_W_HALF, -476 + (titleVisible * RES_H));
 	draw_set_alpha(titleVisible * abs(sin(get_timer() * 0.000001 * pi)));
 	draw_set_color(c_black);
 	draw_text(RES_W_HALF + 1, 406, "Press any key...");

@@ -6,6 +6,7 @@
   "name":"oEquipment1",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEquipment0","path":"objects/oEquipment0/oEquipment0.yy",},"propertyId":{"name":"slot","path":"objects/oEquipment0/oEquipment0.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oEquipment0","path":"objects/oEquipment0/oEquipment0.yy",},"propertyId":{"name":"equipmentString","path":"objects/oEquipment0/oEquipment0.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Weapon 2",},
   ],
   "parent":{
     "name":"Equipment",

@@ -1,7 +1,12 @@
 ///@desc Draw the button
+draw_set_alpha(1);
 draw_sprite(sprite_index, image_index, x - cx, y - cy);
 
 //Title word
 scDrawSet(fRoboto24, fa_center, fa_middle);
-var _string = global.weaponText[global.playerWeaponEquiptArray[slot]];
-draw_text(x - cx, y - cy, _string);
+if (global.playerWeaponEquiptArray[slot] == 0){
+	draw_set_alpha(0.75);
+	draw_text(x - cx, y - cy, equipmentString);
+}else{
+	draw_text(x - cx, y - cy, global.weaponText[global.playerWeaponEquiptArray[slot]]);
+}

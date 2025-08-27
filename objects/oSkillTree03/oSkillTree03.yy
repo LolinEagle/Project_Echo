@@ -9,6 +9,7 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oSkillTree00","path":"objects/oSkillTree00/oSkillTree00.yy",},"propertyId":{"name":"titleWord","path":"objects/oSkillTree00/oSkillTree00.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Sword",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oSkillTree00","path":"objects/oSkillTree00/oSkillTree00.yy",},"propertyId":{"name":"titleTextbox","path":"objects/oSkillTree00/oSkillTree00.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Sword",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oSkillTree00","path":"objects/oSkillTree00/oSkillTree00.yy",},"propertyId":{"name":"previousWeaponUnlocked","path":"objects/oSkillTree00/oSkillTree00.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"WEAPON.BAYONET",},
   ],
   "parent":{
     "name":"SkillTree",

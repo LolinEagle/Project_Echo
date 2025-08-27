@@ -13,8 +13,8 @@ if(mouse_check_button_pressed(mb_left) && image_index = 1 && !_instanceExists){
 	
 	//Create Weapon
 	for(var i = 0; i < WEAPON.TYPE_COUNT; i++){
-		if(i = 1 && slot < 2){i = 4;}
-		if(i = 4 && slot = 2){break;}
+		if(i == 1 && slot < 2){i = 4;}
+		if(i == 4 && slot == 2){break;}
 		
 		//Skip
 		if(i > 0){

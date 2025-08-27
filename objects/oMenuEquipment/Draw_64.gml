@@ -17,4 +17,21 @@ if(selected){
 	//Bottom
 	scDrawSet(fRoboto18, fa_center, fa_middle);
 	draw_text(RES_W_HALF, RES_H - 32, "Pressed Enter to Exit");
+}else{
+	if(
+		global.gameSelected == false &&
+		global.playerWeaponEquiptArray[0] == WEAPON.NONE &&
+		global.playerWeaponEquiptArray[1] == WEAPON.NONE &&
+		global.playerWeaponEquiptArray[2] == WEAPON.NONE &&
+		array_contains(global.playerWeaponUnlocked, true, 1)
+	){
+		scDrawSet(fRoboto24, fa_left, fa_middle);
+		draw_set_color(c_black);
+		draw_text(oMenuEquipment.x + 1 + 160, oMenuEquipment.y + 1, "New");
+		draw_text(oMenuEquipment.x - 1 + 160, oMenuEquipment.y + 1, "New");
+		draw_text(oMenuEquipment.x + 1 + 160, oMenuEquipment.y - 1, "New");
+		draw_text(oMenuEquipment.x - 1 + 160, oMenuEquipment.y - 1, "New");
+		draw_set_color(c_red);
+		draw_text(oMenuEquipment.x + 160, oMenuEquipment.y, "New");
+	}
 }

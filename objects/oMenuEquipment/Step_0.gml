@@ -5,7 +5,6 @@ event_inherited();
 if(mouse_check_button_pressed(mb_left) && image_index = 1){
 	global.gameSelected = true;
 	selected = true;
-	
 	if(!instance_exists(oEquipment0)){
 		instance_create_depth(160 + cx, 096 + cy, depth - 1, oEquipment0);
 		instance_create_depth(160 + cx, 160 + cy, depth - 1, oEquipment1);
@@ -15,8 +14,7 @@ if(mouse_check_button_pressed(mb_left) && image_index = 1){
 		instance_create_depth(160 + cx, 416 + cy, depth - 1, oEquipment5);
 	}
 }
-	
-//Back to main menu
+
 if(selected && keyboard_check_pressed(vk_enter)){
 	global.gameSelected = false;
 	selected = false;

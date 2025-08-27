@@ -2,7 +2,7 @@
 if(room == rMenu || instance_exists(oIntro)){visible = false;}
 else{visible = true;}
 
-if(global.gamePaused && !instance_exists(oOption)){
+if(global.gamePausedBattle && global.gamePaused && !instance_exists(oOption)){
 	keyUp	= keyboard_check_pressed(global.gameUp);
 	keyDown	= keyboard_check_pressed(global.gameDown);
 	pauseOptionSelected += (keyDown - keyUp);
@@ -10,8 +10,7 @@ if(global.gamePaused && !instance_exists(oOption)){
 	//Min & Max
 	if(pauseOptionSelected >= array_length(pauseOption)){
 		pauseOptionSelected = 0;
-	}
-	if(pauseOptionSelected < 0){
+	}else if(pauseOptionSelected < 0){
 		pauseOptionSelected = array_length(pauseOption) - 1;
 	}
 	if(keyboard_check_pressed(vk_enter) || KEY_USE){
