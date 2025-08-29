@@ -59,4 +59,12 @@ if(global.gameDebug){
 		file_delete("save2.sav");
 		file_delete("save3.sav");
 	}
+	if(false){
+		scCollectCoin(0);
+		scCollectItemsAmmo([0, 0]);
+		scCollectWeaponAmmo([0, 0]);
+		scCollectMana(0);
+		scEntityHitDestroy();
+		scEntityHitSolid();
+	}
 }

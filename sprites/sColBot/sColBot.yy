@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sColBot",
   "bboxMode":2,
-  "bbox_bottom":64,
+  "bbox_bottom":50,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":32,

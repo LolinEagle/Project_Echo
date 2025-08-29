@@ -17,7 +17,7 @@ stateAttack = scAttackSlash;
 localFrame = 0;
 sprite = sPlayer;
 spriteRun = sPlayerRun;
-spriteDash = sPlayer;
+//spriteDash = sPlayer;
 spriteAttack = sPlayerAttackSlash;
 spriteAttackHB = sPlayerAttackSlashHB;
 reaction = false;
@@ -32,7 +32,7 @@ speedTimer = 0;
 
 //Dash
 speedDash = 6;
-distanceDash = 96;
+distanceDash = 128;
 
 //Hook
 speedHook = 6;

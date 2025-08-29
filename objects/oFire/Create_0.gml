@@ -6,3 +6,5 @@ collisionHistory = ds_list_create();
 flash = 0;
 flashShader = shRedFlash;
 uFlash = shader_get_uniform(flashShader, "flash");
+
+depth = 0

@@ -6,11 +6,11 @@ function scPlayerStateDash(){
 	var _collided = scPlayerCollision();
 
 	//Update Sprite
-	sprite_index = spriteDash;
+	/*sprite_index = spriteDash;
 	var _frames = sprite_get_number(sprite_index) / 4;
 	image_index = CARDINAL_DIR * _frames + min(
 		((moveDistanceRemaining / distanceDash) - 1) * _frames, _frames - 1
-	);
+	);*/
 
 	//Change State
 	if(moveDistanceRemaining <= 0){

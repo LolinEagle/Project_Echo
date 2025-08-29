@@ -5,7 +5,7 @@ audio_group_load(OST);
 audio_group_load(SFX);
 
 //Game
-global.gameDebug = true;
+global.gameDebug = false;
 global.gameSaveSlot = 0;
 global.gamePaused = false;
 global.gamePausedBattle = false;
