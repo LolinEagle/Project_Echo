@@ -1,5 +1,5 @@
 # Project Echo
-Game Maker Studio 2 Project
+Project Echo is a hand-crafted 2D pixel art adventure, a pure action-RPG experience. Explore the world and engage in dynamic combat. Embark on a gripping single-player adventure through rich landscapes. Built in GameMaker, this action-RPG hybrid offers a compelling experience.
 
 ![1](https://github.com/user-attachments/assets/47062bb6-6301-4fc7-80a0-b6f9b4a68c23)
 ![2](https://github.com/user-attachments/assets/f28816f8-8c42-4700-a48d-6ec450717db1)
