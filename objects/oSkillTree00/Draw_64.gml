@@ -8,8 +8,7 @@ scDrawSet(font, fa_center, fa_middle);
 draw_text(x - cx, y - cy, titleWord);
 
 //Textbox
-return;
-if(showText && iTitle >= FPS){
+/*if(showText && iTitle >= FPS){
 	//Set
 	scDrawSet(fRoboto24, fa_left, fa_top);
 	var _width = string_width(titleTextbox) + 16;
@@ -21,4 +20,4 @@ if(showText && iTitle >= FPS){
 	//Text
 	draw_set_color(c_white);
 	draw_text(xx + 8 - cx, yy - 56 - cy, titleTextbox);
-}
+}*/

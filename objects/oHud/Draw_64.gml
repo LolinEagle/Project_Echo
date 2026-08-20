@@ -31,8 +31,8 @@ if(!global.gamePaused){
 		);
 	}#endregion
 	#region Draw Item
-	_xx = 8;
-	_yy = 68;
+	var _xx = 8;
+	var _yy = 68;
 	draw_sprite(sHudItemBox, 0, _xx, _yy);
 	draw_sprite(sHudItem, global.playerItem, _xx, _yy);
 	scDrawSet(fRoboto18, fa_left, fa_top);
@@ -45,7 +45,7 @@ if(!global.gamePaused){
 		draw_set_color(c_black);
 		_xx = _xx + (sprite_get_width(sHudItemBox) / 2);
 		_yy = _yy + sprite_get_height(sHudItemBox) + 12;
-		_str = string(global.playerItemsAmmo[global.playerItem]);
+		var _str = string(global.playerItemsAmmo[global.playerItem]);
 		draw_text(_xx + 2, _yy, _str);
 		draw_text(_xx - 2, _yy, _str);
 		draw_text(_xx, _yy + 2, _str);
@@ -54,8 +54,8 @@ if(!global.gamePaused){
 		draw_text(_xx, _yy, _str);
 	}#endregion
 	#region Draw Money
-	var _xx = 80;
-	var _yy = 90;
+	_xx = 80;
+	_yy = 90;
 	draw_sprite(sCoin, 0, _xx, _yy);
 
 	//Draw Coin Text

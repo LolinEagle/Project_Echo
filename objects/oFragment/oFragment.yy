@@ -28,7 +28,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"bounceCount","filters":[
+    {"$GMObjectProperty":"v2","%Name":"bounceCount","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -40,7 +40,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"bounceCount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"bounceSpeed","filters":[
+    {"$GMObjectProperty":"v2","%Name":"bounceSpeed","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -52,7 +52,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"bounceSpeed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.05","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"bounceHeight","filters":[
+    {"$GMObjectProperty":"v2","%Name":"bounceHeight","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -64,7 +64,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"bounceHeight","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"8","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"deteriorateAfter","filters":[
+    {"$GMObjectProperty":"v2","%Name":"deteriorateAfter","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -76,7 +76,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"deteriorateAfter","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"deteriorateTime","filters":[
+    {"$GMObjectProperty":"v2","%Name":"deteriorateTime","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",

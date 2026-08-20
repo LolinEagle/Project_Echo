@@ -30,7 +30,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"entityActivateScript","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityActivateScript","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -42,7 +42,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityActivateScript","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"entityActivateArgs","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityActivateArgs","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -54,7 +54,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityActivateArgs","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"[-1]","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"entityCollision","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityCollision","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -66,8 +66,8 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityCollision","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"entityCollide","filters":[],"listItems":[],"multiselect":false,"name":"entityCollide","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"entityNPC","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityCollide","filters":[],"listItems":[],"multiselect":false,"name":"entityCollide","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"entityNPC","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -79,7 +79,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityNPC","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"entityShadow","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityShadow","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -91,7 +91,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityShadow","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"entityHitScript","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityHitScript","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -103,7 +103,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityHitScript","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"entityFragmentCount","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityFragmentCount","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -115,7 +115,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityFragmentCount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"entityFragment","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityFragment","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -127,7 +127,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityFragment","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"entityThrowBreak","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityThrowBreak","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -139,7 +139,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityThrowBreak","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"entityThrowDistance","filters":[
+    {"$GMObjectProperty":"v2","%Name":"entityThrowDistance","filters":[
         "GMTileSet",
         "GMSprite",
         "GMSound",
@@ -151,7 +151,7 @@
         "GMObject",
         "GMRoom",
       ],"listItems":null,"multiselect":false,"name":"entityThrowDistance","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"128","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"entityHookable","filters":[],"listItems":[],"multiselect":false,"name":"entityHookable","rangeEnabled":true,"rangeMax":2.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"entityHookable","filters":[],"listItems":[],"multiselect":false,"name":"entityHookable","rangeEnabled":true,"rangeMax":2.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

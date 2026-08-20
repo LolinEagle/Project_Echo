@@ -46,7 +46,7 @@ function scPlayerCollision(){
 	}
 
 	//Vertical Entity
-	var _entityCount = instance_position_list(
+	_entityCount = instance_position_list(
 		x, y + vSpeed, pEntity, _entityList, false
 	);
 	var _snapY;

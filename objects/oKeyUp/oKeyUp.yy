@@ -30,8 +30,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"gameKey","filters":[],"listItems":[],"multiselect":false,"name":"gameKey","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"global.gameUp","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"stringKey","filters":[],"listItems":[],"multiselect":false,"name":"stringKey","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Up","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"gameKey","filters":[],"listItems":[],"multiselect":false,"name":"gameKey","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"global.gameUp","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"stringKey","filters":[],"listItems":[],"multiselect":false,"name":"stringKey","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"Up","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

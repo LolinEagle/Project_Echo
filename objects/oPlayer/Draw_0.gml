@@ -9,7 +9,7 @@ if(reaction){draw_sprite(sReaction, reactionSubimg, x, y - 64);}
 //Hookshot
 if(state == scPlayerStateHook){scDrawHookChain();}
 if(invulnerable != 0 && (invulnerable mod 8 < 2) == 0 && flash == 0){
-	;
+
 }else{
 	if(flash != 0){
 		shader_set(flashShader);
@@ -33,8 +33,7 @@ if(invulnerable != 0 && (invulnerable mod 8 < 2) == 0 && flash == 0){
 }
 
 function scDrawHookChain(){
-	if(image_index = 1 || image_index = 3){var _originX = floor(x) - 7;}
-	else{var _originX = floor(x);}
+	var _originX = image_index = 1 || image_index = 3 ? floor(x) - 7 : floor(x);
 	var _originY = floor(y) - 29;
 	var _chain = hook / hookSize;
 	var _hookDirX = sign(hookX);

@@ -1,1 +1,1 @@
-function scPlayerStateLock(){;}
+function scPlayerStateLock(){}

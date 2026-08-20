@@ -10,7 +10,6 @@ sprAttack = sSlimeAttack;
 sprDie = sSlimeDie;
 sprHurt = sSlimeHurt;
 
-
 //Enemy Scripts
 enemyScripts[ENEMYSTATE.WANDER] = scSlimeWander;
 enemyScripts[ENEMYSTATE.CHASE] = scSlimeChase;
