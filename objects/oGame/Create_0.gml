@@ -15,8 +15,13 @@ global.gameCutscenes = 0;
 //Option
 global.gameOST = 0.5;
 global.gameSFX = 0.5;
-global.gameUp = ord("Z");
-global.gameLeft = ord("Q");
+if (os_get_language() == "fr"){
+	global.gameUp = ord("Z");
+	global.gameLeft = ord("Q");
+} else {
+	global.gameUp = ord("W");
+	global.gameLeft = ord("A");
+}
 global.gameDown = ord("S");
 global.gameRight = ord("D");
 
